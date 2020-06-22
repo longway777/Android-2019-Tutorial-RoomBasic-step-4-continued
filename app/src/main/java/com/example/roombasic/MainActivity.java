@@ -2,6 +2,7 @@ package com.example.roombasic;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -28,7 +29,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         recyclerView = findViewById(R.id.recyclerView);
-        wordViewModel = ViewModelProviders.of(this).get(WordViewModel.class);
+
+        //wordViewModel = ViewModelProviders.of(this).get(WordViewModel.class);
+        wordViewModel = new ViewModelProvider(this).get(WordViewModel.class);
+
         myAdapter1 = new MyAdapter(false,wordViewModel);
         myAdapter2 = new MyAdapter(true,wordViewModel);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

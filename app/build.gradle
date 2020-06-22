@@ -35,7 +35,8 @@ dependencies {
 
     // Test helpers
     testImplementation "androidx.room:room-testing:$room_version"
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
-    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.3.0-alpha04'
     implementation 'androidx.cardview:cardview:1.0.0'
 }
